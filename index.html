@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura — Modern digital experiences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="siteHeader">
+      <nav class="navbar" aria-label="Primary">
+        <a class="logo" href="#hero" data-scroll>Aura</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navMenu"
+          aria-label="Open menu"
+          id="navToggle"
+        >
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <div class="nav-backdrop" id="navBackdrop" hidden></div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hero" data-scroll>Home</a></li>
+          <li><a href="#about" data-scroll>About</a></li>
+          <li><a href="#services" data-scroll>Services</a></li>
+          <li><a href="#contact" data-scroll>Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-inner">
+          <p class="hero-eyebrow fade-up">Design · Build · Launch</p>
+          <h1 class="hero-title fade-up delay-1">
+            Crafting digital products that feel effortless.
+          </h1>
+          <p class="hero-lead fade-up delay-2">
+            We partner with teams to ship polished interfaces, thoughtful UX, and
+            performant web experiences.
+          </p>
+          <a class="btn btn-primary fade-up delay-3" href="#contact" data-scroll>
+            Start a project
+          </a>
+        </div>
+        <div class="hero-glow" aria-hidden="true"></div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="container about-grid">
+          <div class="about-copy reveal">
+            <h2 class="section-title">About us</h2>
+            <p class="section-lead">
+              Aura is a small studio focused on clarity, speed, and measurable
+              outcomes. We believe great software should feel calm, confident, and
+              easy to use.
+            </p>
+            <p>
+              From discovery to delivery, we work in tight feedback loops so your
+              product evolves with your users—not against them.
+            </p>
+          </div>
+          <figure class="about-media reveal delay-1">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
+              alt="Team collaborating around a laptop in a bright office"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="container">
+          <header class="section-head reveal">
+            <h2 class="section-title">Services</h2>
+            <p class="section-lead">
+              Everything you need to go from idea to a refined launch.
+            </p>
+          </header>
+          <div class="cards">
+            <article class="card reveal">
+              <div class="card-icon" aria-hidden="true">01</div>
+              <h3>Product design</h3>
+              <p>
+                Wireframes, UI systems, and prototypes that align stakeholders and
+                set engineering up for success.
+              </p>
+            </article>
+            <article class="card reveal delay-1">
+              <div class="card-icon" aria-hidden="true">02</div>
+              <h3>Web development</h3>
+              <p>
+                Accessible, responsive front ends with clean architecture and
+                performance budgets baked in.
+              </p>
+            </article>
+            <article class="card reveal delay-2">
+              <div class="card-icon" aria-hidden="true">03</div>
+              <h3>Growth &amp; analytics</h3>
+              <p>
+                Instrumentation, funnels, and iteration cycles so you learn fast
+                after launch.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="container contact-inner">
+          <div class="contact-intro reveal">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-lead">
+              Tell us about your project. We typically reply within two business
+              days.
+            </p>
+          </div>
+          <form class="contact-form reveal delay-1" id="contactForm" novalidate>
+            <label class="field">
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label class="field field-full">
+              <span>Message</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Aura. All rights reserved.</p>
+        <a href="#hero" data-scroll>Back to top</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
